@@ -2,3 +2,11 @@
 .DS_Store?
 /venv
 /clean_data.csv
+# project
+.venv/
+venv/
+*.tar
+*.zip
+.pytest_cache/
+__pycache__/
+data/raw/*.csv

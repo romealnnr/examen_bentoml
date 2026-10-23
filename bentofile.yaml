@@ -1,0 +1,21 @@
+service: "src.service:AdmissionService"
+description: "Secure (JWT) API predicting a student's chance of university admission"
+labels:
+  owner: "romeal"
+  project: "admissions_prediction"
+include:
+  - "src/__init__.py"
+  - "src/auth.py"
+  - "src/service.py"
+models:
+  - admission_lr:latest
+python:
+  packages:
+    - bentoml==1.4.35
+    - scikit-learn==1.5.2
+    - pandas==2.3.3
+    - numpy<2.3
+    - pydantic==2.12.3
+    - pyjwt==2.10.1
+docker:
+  python_version: "3.11"
